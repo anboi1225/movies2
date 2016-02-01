@@ -23,7 +23,7 @@ class MovieData
   end
 #make a prediction of the rating which user u would give to movie m
   def predict(u, m)
-    prating = 0.0
+    #prating = 0.0
     file = open(@training)
     avgur = 0.0
     ucount = 0
@@ -52,6 +52,7 @@ class MovieData
     return prating
 
   end
+
 #list all movies that user u watched
   def movies(u)
     movie_list = []
@@ -96,7 +97,7 @@ class MovieData
         t.difference.push(difference)
       end
     else
-      (0..k-1).each do |i|
+      (0..k-1).each do
         line = file.readline
         attrs = line.split
         uid = attrs[0].to_i
@@ -166,7 +167,7 @@ class MovieTest
   end
 end
 
-z = MovieData.new("/home/boyang/Dropbox/cosi166b_ban/movies-2", "u1")
+#z = MovieData.new("/home/boyang/Dropbox/cosi166b_ban/movies-1", "u1")
 #puts z.rating(1,7)
 #puts z.movies(196)
 #puts z.viewers(377)
