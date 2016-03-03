@@ -167,11 +167,14 @@ class MovieTest
   end
 end
 
-#z = MovieData.new("/home/boyang/Dropbox/cosi166b_ban/movies-1", "u1")
+z = MovieData.new("/home/boyang/Dropbox/cosi166b_ban/movies-1", "u1")
 #puts z.rating(1,7)
 #puts z.movies(196)
 #puts z.viewers(377)
+#start = Time.now
 #puts z.predict(406,318)
+#finish = Time.now
+#puts finish - start
 
 #puts z.run_test(100).mean()
 #puts z.run_test(100).stddev()
